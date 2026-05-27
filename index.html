@@ -4,6 +4,85 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>6teen | Sixth Sense of Talented Entertainment Entity Noon</title>
+
+    <!-- =======================================================
+         ADVANCED GOOGLE INDEXING & SEO SEARCH TAGS
+         ======================================================= -->
+    <!-- Tells Google and other search engines to fully index this page -->
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+    
+    <!-- Standard Search Engine Optimization (SEO) Meta Tags -->
+    <meta name="description" content="Official website of 6teen, founded by Joseph Takyi Ansah Prah. Reconnecting people to playfulness and joy through vibrant, neon, and explosive abstract art in Swedru, Winneba, Ghana, and globally. Explore and paint on our interactive neon canvas.">
+    
+    <!-- Expanded Keywords (Packed with name variations, art styles, local tags, and common spelling variations) -->
+    <meta name="keywords" content="6teen, Joseph, Takyi, Takiy, Ansah, Prah, Joseph Takyi Ansah Prah, Joseph Takiy Ansah Prah, Joseph Prah, Takyi Prah, Takiy Prah, 6teen paint, 6teen artise, 6teen artist, 6teen Ghana, paint, painting, artist, artise, neon paint Swedru, neon paint Ghana, Swedru artist, winneba art, Swedru creative hub, Swedru designer, Swedru entertainment, Ghana abstract art, West Africa neon art, Ghanaian painter, creative playground, entertainment entity noon, sixth sense of talented entertainment entity noon">
+    <meta name="author" content="Joseph Takyi Ansah Prah">
+    
+    <!-- Local & Regional SEO (Deeply targets search engines in Swedru, Winneba, and Ghana) -->
+    <meta name="geo.region" content="GH-CP"> <!-- Ghana Central Province -->
+    <meta name="geo.placename" content="Swedru, Agona Swedru, Winneba, Central Region, Ghana, Accra, West Africa">
+    <meta name="geo.position" content="5.5333; -0.7000"> <!-- Coordinates for Swedru -->
+    <meta name="ICBM" content="5.5333, -0.7000">
+
+    <!-- Google Site Verification (Placeholder)
+         When you register on Google Search Console, you can paste your custom code inside the content="" below. -->
+    <meta name="google-site-verification" content="PASTE_YOUR_GOOGLE_VERIFICATION_CODE_HERE" />
+
+    <!-- Canonical URL (Tells Google this is the official and original link) -->
+    <link rel="canonical" href="https://6teen-official.com" />
+
+    <!-- Schema.org JSON-LD Structured Data (Tells Google explicitly who the artist is and what the brand is) -->
+    <script type="application/ld+json">
+    [
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "@id": "https://6teen-official.com/#creator",
+        "name": "Joseph Takyi Ansah Prah",
+        "alternateName": ["6TEEN", "Joseph Takiy Ansah Prah", "Joseph Takyi", "Joseph Takiy", "Joseph Prah"],
+        "url": "https://6teen-official.com",
+        "image": "https://res.cloudinary.com/degsadldb/image/upload/v1779832857/465_dk4zkg.jpg",
+        "description": "Joseph Takyi Ansah Prah, known as 6teen, is an abstract, paint, and experimental neon artist based in Swedru, Winneba, Central Region, Ghana.",
+        "homeLocation": {
+          "@type": "Place",
+          "name": "Swedru, Ghana"
+        },
+        "jobTitle": "Artist and Creator",
+        "knowsAbout": ["Abstract Art", "Neon Art", "Watercolor Painting", "Acrylic Art", "Creative Playfulness", "Paint Expression"],
+        "sameAs": [
+          "https://www.facebook.com/share/1DKec4G2Z8/",
+          "https://www.instagram.com/6teen.official.00?igsh=MTQyYmRsZ2hxNmNp"
+        ]
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "WebApplication",
+        "@id": "https://6teen-official.com/#playground",
+        "name": "6TEEN Creative Drawing Playground",
+        "applicationCategory": "DesignApplication",
+        "operatingSystem": "All",
+        "browserRequirements": "Requires JavaScript. Requires HTML5 Canvas.",
+        "description": "An interactive digital neon paint canvas where users can paint with glowing colors and save their designs with custom 6teen watermarks.",
+        "creator": {
+          "@id": "https://6teen-official.com/#creator"
+        }
+      }
+    ]
+    </script>
+
+    <!-- Open Graph (Social Sharing Meta Tags for WhatsApp, Instagram, Facebook) -->
+    <meta property="og:title" content="6teen | Sixth Sense of Talented Entertainment Entity Noon">
+    <meta property="og:description" content="Reconnecting to Playfulness & Joy through vibrant, explosive, and imaginative paint and art. Founded by Joseph Takyi Ansah Prah.">
+    <meta property="og:image" content="https://res.cloudinary.com/degsadldb/image/upload/v1779825723/ChatGPT_Image_May_22_2026_11_29_51_PM_ltswqj.png">
+    <meta property="og:url" content="https://6teen-official.com">
+    <meta property="og:type" content="website">
+
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="6teen | Sixth Sense of Talented Entertainment Entity Noon">
+    <meta name="twitter:description" content="Reconnecting to Playfulness & Joy through vibrant, explosive, and imaginative paint and art. Founded by Joseph Takyi Ansah Prah.">
+    <meta name="twitter:image" content="https://res.cloudinary.com/degsadldb/image/upload/v1779825723/ChatGPT_Image_May_22_2026_11_29_51_PM_ltswqj.png">
+
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- Google Fonts -->
@@ -51,6 +130,13 @@
                 url("data:image/svg+xml,%3Csvg width='20' height='20' viewBox='0 0 20 20' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='2' cy='2' r='1' fill='%23d4af37' fill-opacity='0.08'/%3E%3C/svg%3E");
         }
 
+        /* Interactive Drawing Pad Canvas */
+        #drawingCanvas {
+            cursor: crosshair;
+            background: #0d0d0d;
+            touch-action: none;
+        }
+
         /* Toast Notification */
         #toast {
             visibility: hidden;
@@ -79,15 +165,6 @@
             letter-spacing: 0.1em;
             text-transform: uppercase;
         }
-
-        /* Animation for new posts */
-        @keyframes fadeInDown {
-            from { opacity: 0; transform: translateY(-20px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-        .animate-fade-in {
-            animation: fadeInDown 0.5s ease-out forwards;
-        }
     </style>
 </head>
 <body class="antialiased">
@@ -102,7 +179,7 @@
                 <div class="flex justify-between h-24 items-center">
                     <div class="flex items-center justify-center">
                         <a href="#home">
-                            <img src="https://media-los4-1.cdn.whatsapp.net/v/t61.24694-24/609313783_905669001909076_1692419521789888718_n.jpg?ccb=11-4&oh=01_Q5Aa4AGlsLtgSFcwaZ6Zvkf487A0oqNdt5t8K7JwinBi9GH3bQ&oe=69D25675&_nc_sid=5e03e0&_nc_cat=106" alt="6teen Logo" class="h-16 md:h-20 py-2 object-contain transition-transform hover:scale-105">
+                            <img src="https://res.cloudinary.com/degsadldb/image/upload/v1779825723/ChatGPT_Image_May_22_2026_11_29_51_PM_ltswqj.png" alt="6teen Header Logo - Sixth Sense of Talented Entertainment Entity Noon" class="h-16 md:h-20 py-2 object-contain transition-transform hover:scale-105">
                         </a>
                     </div>
                     <div class="hidden lg:flex items-center space-x-8 uppercase text-xs font-bold tracking-widest">
@@ -110,9 +187,9 @@
                         <a href="#about" class="hover:text-gold transition">Bio</a>
                         <a href="#statement" class="hover:text-gold transition">Statement</a>
                         <a href="#vision" class="hover:text-gold transition">Vision</a>
+                        <a href="#playground" class="hover:text-gold transition">Playground</a>
                         <a href="#identity" class="hover:text-gold transition">Identity</a>
                         <a href="#portfolio" class="hover:text-gold transition">Portfolio</a>
-                        <a href="#feed" class="hover:text-gold transition">Feed</a>
                         <a href="#contact" class="bg-black text-white px-6 py-2 border border-gold hover:bg-gold hover:text-black transition">Contact</a>
                     </div>
                     <!-- Mobile Button -->
@@ -129,9 +206,9 @@
                 <a href="#about" class="mobile-link">Bio</a>
                 <a href="#statement" class="mobile-link">Statement</a>
                 <a href="#vision" class="mobile-link">Vision</a>
+                <a href="#playground" class="mobile-link">Playground</a>
                 <a href="#identity" class="mobile-link">Identity</a>
                 <a href="#portfolio" class="mobile-link">Portfolio</a>
-                <a href="#feed" class="mobile-link">Feed</a>
                 <a href="#contact" class="mobile-link bg-black text-white px-8 py-2 mx-auto inline-block border border-gold">Contact</a>
             </div>
         </nav>
@@ -145,7 +222,7 @@
                 </p>
                 <div class="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-6">
                     <a href="#portfolio" class="bg-gold text-black px-12 py-4 font-bold text-lg border-2 border-gold hover:bg-white transition-all shadow-2xl">View My Work</a>
-                    <a href="#contact" class="bg-transparent text-white px-12 py-4 font-bold text-lg border-2 border-white hover:bg-gold hover:text-black hover:border-gold transition-all">Let's Connect</a>
+                    <a href="#playground" class="bg-transparent text-white px-12 py-4 font-bold text-lg border-2 border-white hover:bg-gold hover:text-black hover:border-gold transition-all">Go to Playground</a>
                 </div>
             </div>
         </section>
@@ -176,7 +253,7 @@
                 </div>
                 <div class="flex justify-center order-1 md:order-2">
                     <div class="border-[20px] border-black p-4 bg-white shadow-[30px_30px_0_#D4AF37] relative group">
-                        <img src="https://media-los4-1.cdn.whatsapp.net/v/t61.24694-24/609313783_905669001909076_1692419521789888718_n.jpg?ccb=11-4&oh=01_Q5Aa4AGlsLtgSFcwaZ6Zvkf487A0oqNdt5t8K7JwinBi9GH3bQ&oe=69D25675&_nc_sid=5e03e0&_nc_cat=106" alt="The Artist" class="w-full h-auto grayscale group-hover:grayscale-0 transition duration-700">
+                        <img src="https://res.cloudinary.com/degsadldb/image/upload/v1779832857/465_dk4zkg.jpg" alt="Joseph Takyi Ansah Prah - Abstract and Neon Artist from Swedru, Ghana" class="w-full h-auto grayscale group-hover:grayscale-0 transition duration-700">
                     </div>
                 </div>
             </div>
@@ -223,16 +300,83 @@
             </div>
         </section>
 
+        <!-- Interactive Playground Section -->
+        <section id="playground" class="py-24 px-6 bg-black text-white border-y-4 border-gold">
+            <div class="max-w-6xl mx-auto text-center">
+                <span class="text-gold font-bold uppercase tracking-[0.3em] mb-4 block">Interactive Canvas</span>
+                <h2 class="text-4xl md:text-6xl font-bold mb-6">The Creative Playground</h2>
+                <p class="text-gray-300 text-lg md:text-xl max-w-3xl mx-auto mb-10 font-light">
+                    "I want people to play, dream, and feel joy." Click or touch below to paint glowing, explosive neon colors directly on the canvas! Save your masterwork when you are done.
+                </p>
+
+                <!-- Interactive Drawing Pad Area -->
+                <div class="border-4 border-gold bg-black relative shadow-2xl overflow-hidden rounded-lg">
+                    <canvas id="drawingCanvas" class="w-full h-[400px] block"></canvas>
+                    
+                    <!-- Hidden Custom Color Picker -->
+                    <input type="color" id="customColorPicker" class="hidden" onchange="setBrushColor(this.value)">
+
+                    <!-- Control panel overlays -->
+                    <div class="absolute bottom-4 left-1/2 -translate-x-1/2 bg-black/90 backdrop-blur-md px-6 py-4 rounded-xl border border-gold/40 flex items-center space-x-4 md:space-x-6 text-sm flex-wrap justify-center gap-3 w-[92%] max-w-2xl">
+                        <!-- Custom & Preset Colors Container -->
+                        <div class="flex items-center space-x-2">
+                            <span class="text-gray-400 text-xs hidden sm:inline uppercase font-bold tracking-wider">Palette:</span>
+                            <div class="flex flex-wrap gap-1.5 justify-center">
+                                <button onclick="setBrushColor('#D4AF37')" aria-label="Gold Color" class="w-6 h-6 rounded-full bg-[#D4AF37] border-2 border-white focus:scale-125 transition"></button>
+                                <button onclick="setBrushColor('#FF007F')" aria-label="Neon Pink" class="w-6 h-6 rounded-full bg-[#FF007F] border-2 border-white focus:scale-125 transition"></button>
+                                <button onclick="setBrushColor('#00F3FF')" aria-label="Neon Cyan" class="w-6 h-6 rounded-full bg-[#00F3FF] border-2 border-white focus:scale-125 transition"></button>
+                                <button onclick="setBrushColor('#39FF14')" aria-label="Neon Green" class="w-6 h-6 rounded-full bg-[#39FF14] border-2 border-white focus:scale-125 transition"></button>
+                                <button onclick="setBrushColor('#B026FF')" aria-label="Neon Purple" class="w-6 h-6 rounded-full bg-[#B026FF] border-2 border-white focus:scale-125 transition"></button>
+                                <button onclick="setBrushColor('#FF5E00')" aria-label="Neon Orange" class="w-6 h-6 rounded-full bg-[#FF5E00] border-2 border-white focus:scale-125 transition"></button>
+                                <button onclick="setBrushColor('#FF003C')" aria-label="Neon Red" class="w-6 h-6 rounded-full bg-[#FF003C] border-2 border-white focus:scale-125 transition"></button>
+                                <button onclick="setBrushColor('#ffffff')" aria-label="Pure White" class="w-6 h-6 rounded-full bg-white border-2 border-white focus:scale-125 transition"></button>
+                                
+                                <!-- Custom Picker Trigger -->
+                                <button onclick="document.getElementById('customColorPicker').click()" aria-label="Custom Color Picker" class="w-6 h-6 rounded-full bg-gradient-to-tr from-pink-500 via-red-500 to-yellow-400 border-2 border-white focus:scale-125 transition relative" title="Custom Picker"></button>
+                            </div>
+                        </div>
+
+                        <!-- Divider line -->
+                        <div class="h-6 w-px bg-gray-700 hidden md:block"></div>
+
+                        <!-- Brush Size Slider -->
+                        <div class="flex items-center space-x-2">
+                            <span class="text-gray-400 text-xs hidden sm:inline uppercase font-bold tracking-wider">Size:</span>
+                            <input type="range" min="2" max="40" value="8" id="brushSize" oninput="setBrushSize(this.value)" class="w-16 md:w-24 accent-gold bg-gray-800 h-1.5 rounded-lg appearance-none cursor-pointer">
+                            <span id="brushSizeVal" class="text-gold text-xs font-bold w-6">8px</span>
+                        </div>
+
+                        <!-- Divider line -->
+                        <div class="h-6 w-px bg-gray-700 hidden sm:block"></div>
+
+                        <!-- Canvas Controls with visual arrow signs -->
+                        <div class="flex items-center space-x-3 sm:space-x-4">
+                            <!-- Refined Undo & Redo Sign Action Buttons -->
+                            <button onclick="undo()" class="text-gray-400 hover:text-white transition font-bold uppercase tracking-wider text-xs flex items-center" title="Undo Last Stroke">
+                                <span class="mr-1 text-sm">↩</span> Undo
+                            </button>
+                            <button onclick="redo()" class="text-gray-400 hover:text-white transition font-bold uppercase tracking-wider text-xs flex items-center" title="Redo Stroke">
+                                <span class="mr-1 text-sm">↪</span> Redo
+                            </button>
+                            
+                            <button onclick="clearCanvas()" class="text-gray-400 hover:text-white transition font-bold uppercase tracking-wider text-xs">Clear</button>
+                            <button onclick="downloadArt()" class="bg-gold hover:bg-white text-black px-4 py-1.5 rounded-full font-bold uppercase tracking-wider text-xs transition duration-300">Save Art</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
         <!-- Fuel the Creativity (Support) Section -->
         <section id="support" class="py-24 px-6 bg-gold text-black border-y-4 border-black">
             <div class="max-w-6xl mx-auto text-center">
                 <h2 class="text-4xl md:text-6xl font-bold mb-6 uppercase tracking-tighter">Fuel the Creativity</h2>
-                <p class="text-xl mb-12 font-medium max-w-3xl mx-auto">Your support directly helps acquire materials like acrylics, paints, and watercolors to keep the 6TEEN vision alive.</p>
+                <p class="text-xl mb-12 font-medium max-w-3xl mx-auto text-center leading-relaxed">Your support provides essential art materials, tools, and resources for 6TEEN, while also enabling me to assist others in need. Every contribution helps sustain the vision and creates a meaningful impact.</p>
                 
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
                     <!-- MoMo Box -->
                     <div class="bg-white p-8 border-4 border-black shadow-[10px_10px_0_#000] flex flex-col items-center">
-                        <span class="text-4xl mb-4">📱</span>
+                        <span class="text-4xl mb-4" aria-hidden="true">📱</span>
                         <h4 class="text-xs font-bold uppercase tracking-widest text-gray-500 mb-4">Mobile Money (MTN MoMo)</h4>
                         <p class="text-2xl md:text-3xl font-black mb-1">+233 59 892 4976</p>
                         <p class="text-sm font-bold text-gray-700 uppercase">Joseph Takyi Ansah Prah</p>
@@ -241,9 +385,9 @@
 
                     <!-- Bank Box -->
                     <div class="bg-black text-white p-8 border-4 border-black shadow-[10px_10px_0_#fff] flex flex-col items-center">
-                        <span class="text-4xl mb-4">🏦</span>
+                        <span class="text-4xl mb-4" aria-hidden="true">🏦</span>
                         <h4 class="text-xs font-bold uppercase tracking-widest text-gray-400 mb-4">Bank Transfer</h4>
-                        <p class="text-2xl font-black mb-1 text-gold">1011101226441</p>
+                        <p class="text-2xl md:text-3xl font-black mb-1 text-gold">1011101226441</p>
                         <p class="text-sm font-bold uppercase mb-1">Joseph Takyi Ansah Prah</p>
                         <p class="text-xs font-bold text-gold uppercase tracking-widest italic">GCB Bank</p>
                         <p class="mt-4 text-[10px] font-bold text-gray-600 uppercase tracking-tighter">Corporate & Global Support</p>
@@ -261,43 +405,65 @@
                     <h2 class="text-4xl md:text-6xl font-bold text-black mb-4 uppercase tracking-tighter">The 6TEEN Identity</h2>
                 </div>
                 
-                <div class="grid grid-cols-1 lg:grid-cols-2 gap-16">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-stretch">
                     <!-- Name Explanation -->
-                    <div class="space-y-10">
-                        <div class="bg-black text-white p-10 shadow-xl border-l-8 border-gold">
+                    <div class="space-y-10 h-full">
+                        <div class="bg-black text-white p-10 shadow-xl border-l-8 border-gold h-full">
                             <h3 class="text-3xl font-bold mb-6 text-gold">About the Name</h3>
-                            <p class="text-xl italic mb-8">"Sixth Sense of Talented Entertainment Entity Noon"</p>
+                            <p class="text-xl italic mb-8">“Sixth Sense of Talented Entertainment Entity Noon”</p>
                             <div class="space-y-6">
                                 <div class="flex items-start space-x-4">
                                     <span class="text-gold text-2xl">✨</span>
-                                    <p><strong class="block text-gold uppercase text-sm tracking-widest">Sixth Sense:</strong> Intuition, imagination, and deep connection with creativity beyond ordinary senses.</p>
+                                    <p><strong class="block text-gold uppercase text-sm tracking-widest">Sixth:</strong> Vision beyond the ordinary. Creativity, intuition, imagination, and the ability to sense possibilities before they become reality.</p>
+                                </div>
+                                <div class="flex items-start space-x-4">
+                                    <span class="text-gold text-2xl">🧠</span>
+                                    <p><strong class="block text-gold uppercase text-sm tracking-widest">Sense:</strong> Awareness, perception, and a deep connection to emotion, atmosphere, and meaning.</p>
+                                </div>
+                                <div class="flex items-start space-x-4">
+                                    <span class="text-gold text-2xl">🎨</span>
+                                    <p><strong class="block text-gold uppercase text-sm tracking-widest">Talented:</strong> A multi-skilled creative identity expressed through art, imagination, and vision.</p>
                                 </div>
                                 <div class="flex items-start space-x-4">
                                     <span class="text-gold text-2xl">🎭</span>
-                                    <p><strong class="block text-gold uppercase text-sm tracking-widest">Talented Entity:</strong> My identity as a multi-skilled artist expressing myself across diverse mediums.</p>
+                                    <p><strong class="block text-gold uppercase text-sm tracking-widest">Entertainment:</strong> Creating experiences filled with emotion, energy, and expression that people can feel and remember.</p>
+                                </div>
+                                <div class="flex items-start space-x-4">
+                                    <span class="text-gold text-2xl">🌌</span>
+                                    <p><strong class="block text-gold uppercase text-sm tracking-widest">Entity:</strong> A unique creative presence built on originality, identity, and purpose. Something that exists beyond a name.</p>
                                 </div>
                                 <div class="flex items-start space-x-4">
                                     <span class="text-gold text-2xl">☀️</span>
-                                    <p><strong class="block text-gold uppercase text-sm tracking-widest">Noon:</strong> Clarity, light, and the peak of energy when creation is at its brightest.</p>
+                                    <p><strong class="block text-gold uppercase text-sm tracking-widest">Noon:</strong> Light, clarity, and the moment imagination becomes visible reality.</p>
                                 </div>
                             </div>
                         </div>
                     </div>
 
                     <!-- Logo Explanation -->
-                    <div class="bg-white p-10 border border-gray-200 shadow-xl">
-                        <div class="flex justify-center mb-8 bg-gray-50 py-6 rounded-xl border border-dashed border-gold">
-                            <img src="https://media-los4-1.cdn.whatsapp.net/v/t61.24694-24/609313783_905669001909076_1692419521789888718_n.jpg?ccb=11-4&oh=01_Q5Aa4AGlsLtgSFcwaZ6Zvkf487A0oqNdt5t8K7JwinBi9GH3bQ&oe=69D25675&_nc_sid=5e03e0&_nc_cat=106" alt="Logo" class="h-24 md:h-32 object-contain">
+                    <div class="bg-white p-10 border border-gray-200 shadow-xl h-full flex flex-col justify-between">
+                        <!-- Square Logo Display Container -->
+                        <div class="flex justify-center mb-6 bg-gray-50 p-3 rounded-xl border border-dashed border-gold">
+                            <img src="https://res.cloudinary.com/degsadldb/image/upload/v1779825723/ChatGPT_Image_May_22_2026_11_29_51_PM_ltswqj.png" alt="6teen Official Square Logo - Gradient typography detailing logo symbolism" class="w-36 h-36 md:w-52 md:h-52 aspect-square object-contain transition-transform duration-300 hover:scale-105">
                         </div>
                         <h3 class="text-3xl font-bold mb-6 text-black border-b-2 border-gold pb-2 inline-block">Logo Symbolism</h3>
                         <div class="space-y-6 text-gray-700">
-                            <p>The 6TEEN logo is a vibrant fusion of modern typography and symbolic geometry. The fluid script and curved "smile" arc provide balance, harmony, and a welcoming personality.</p>
+                            <p>The 6TEEN logo is a fusion of modern typography and symbolic geometry. Its fluid form and curved smile arc create balance, harmony, and a welcoming creative presence.</p>
                             <div>
-                                <h4 class="font-bold text-black uppercase text-sm tracking-widest mb-2">Color Theory</h4>
-                                <ul class="list-disc pl-5 space-y-2 text-sm md:text-base">
-                                    <li><strong class="text-blue-600">Cool tones (Purple/Blue):</strong> Represent intuition, depth, and the creative imagination.</li>
-                                    <li><strong class="text-orange-500">Warm tones (Yellow/Orange):</strong> Evoke energy, joy, and the brilliance of the sun (Noon).</li>
-                                    <li><strong class="text-gold">The Gradient:</strong> Symbolizes a diverse, vibrant range of expression across all genres.</li>
+                                <h4 class="font-bold text-black uppercase text-sm tracking-widest mb-4">Color Theory</h4>
+                                <ul class="space-y-4 text-sm md:text-base">
+                                    <li>
+                                        <strong class="text-purple-600 block">Cool tones (Purple and Blue)</strong>
+                                        <p class="text-gray-600">Intuition, depth, and imagination. They reflect the inner world of creativity and vision.</p>
+                                    </li>
+                                    <li>
+                                        <strong class="text-orange-500 block">Warm tones (Yellow and Orange)</strong>
+                                        <p class="text-gray-600">Energy, joy, and the brilliance of Noon. Expression, creativity, and life.</p>
+                                    </li>
+                                    <li>
+                                        <strong class="text-gold block font-semibold">The gradient</strong>
+                                        <p class="text-gray-600">Limitless creative expression. A flow without boundaries, where all forms of creativity exist together, unrestricted.</p>
+                                    </li>
                                 </ul>
                             </div>
                         </div>
@@ -310,86 +476,61 @@
         <section id="portfolio" class="py-24 px-6 bg-white border-t-2 border-black">
             <div class="max-w-7xl mx-auto">
                 <div class="text-center mb-20">
-                    <h2 class="text-5xl md:text-8xl font-bold mb-4 tracking-tighter">The Exhibition</h2>
+                    <h2 class="text-5xl md:text-8xl font-bold mb-4 tracking-tighter">My Artworks</h2>
                     <p class="text-gold font-bold tracking-[0.5em] uppercase text-sm">Vibrant ● Explosive ● Imaginative</p>
                 </div>
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                    <!-- Art Piece 1 (Now Clickable) -->
-                    <a href="#portfolio" class="group relative aspect-square overflow-hidden bg-white border-[12px] border-black shadow-2xl flex items-center justify-center p-6 cursor-pointer block">
-                        <img src="https://media-los4-1.cdn.whatsapp.net/v/t61.24694-24/609313783_905669001909076_1692419521789888718_n.jpg?ccb=11-4&oh=01_Q5Aa4AGlsLtgSFcwaZ6Zvkf487A0oqNdt5t8K7JwinBi9GH3bQ&oe=69D25675&_nc_sid=5e03e0&_nc_cat=106" alt="Art Piece" class="w-full h-full object-cover group-hover:scale-110 transition duration-700">
-                        <div class="absolute inset-0 bg-gold bg-opacity-0 group-hover:bg-opacity-90 transition-all duration-300 flex items-center justify-center">
-                            <span class="text-black font-bold text-xl opacity-0 group-hover:opacity-100 uppercase tracking-[0.2em]">View Art</span>
-                        </div>
-                    </a>
-                    <!-- Art Piece 2 (Now Clickable) -->
-                    <a href="#portfolio" class="group relative aspect-square overflow-hidden bg-white border-[12px] border-black shadow-2xl flex items-center justify-center p-6 cursor-pointer block">
-                        <img src="https://media-los4-1.cdn.whatsapp.net/v/t61.24694-24/609313783_905669001909076_1692419521789888718_n.jpg?ccb=11-4&oh=01_Q5Aa4AGlsLtgSFcwaZ6Zvkf487A0oqNdt5t8K7JwinBi9GH3bQ&oe=69D25675&_nc_sid=5e03e0&_nc_cat=106" alt="Art Piece" class="w-full h-full object-cover group-hover:scale-110 transition duration-700">
-                        <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-90 transition-all duration-300 flex items-center justify-center">
-                            <span class="text-gold font-bold text-xl opacity-0 group-hover:opacity-100 uppercase tracking-[0.2em]">View Art</span>
-                        </div>
-                    </a>
-                    <!-- Art Piece 3 (Now Clickable) -->
-                    <a href="#portfolio" class="group relative aspect-square overflow-hidden bg-white border-[12px] border-black shadow-2xl flex items-center justify-center p-6 cursor-pointer block">
-                        <img src="https://media-los4-1.cdn.whatsapp.net/v/t61.24694-24/609313783_905669001909076_1692419521789888718_n.jpg?ccb=11-4&oh=01_Q5Aa4AGlsLtgSFcwaZ6Zvkf487A0oqNdt5t8K7JwinBi9GH3bQ&oe=69D25675&_nc_sid=5e03e0&_nc_cat=106" alt="Art Piece" class="w-full h-full object-cover group-hover:scale-110 transition duration-700">
-                        <div class="absolute inset-0 bg-gold bg-opacity-0 group-hover:bg-opacity-90 transition-all duration-300 flex items-center justify-center">
-                            <span class="text-black font-bold text-xl opacity-0 group-hover:opacity-100 uppercase tracking-[0.2em]">View Art</span>
-                        </div>
-                    </a>
-                </div>
-            </div>
-        </section>
-
-        <!-- Live Feed Section -->
-        <section id="feed" class="py-24 px-6 bg-gray-50 border-y-2 border-gold relative">
-            <div class="max-w-3xl mx-auto">
-                <div class="text-center mb-12">
-                    <h2 class="text-4xl md:text-6xl font-bold text-black mb-4 uppercase tracking-tighter">Live Feed</h2>
-                    <p class="text-gold font-bold tracking-[0.2em] uppercase text-sm">Latest Updates & Artwork from 6TEEN</p>
-                </div>
-
-                <!-- Create Post Box (Facebook Style) -->
-                <div class="bg-white p-6 border-4 border-black shadow-[10px_10px_0_#D4AF37] mb-12">
-                    <h3 class="font-bold text-lg mb-4 text-black uppercase border-b-2 border-gold pb-2 inline-block">Create a Transmission</h3>
-                    <!-- Removed the onsubmit part here to make it work better in the live preview -->
-                    <form id="postForm" class="space-y-4">
-                        <div>
-                            <textarea id="postText" placeholder="What's on your mind? Tell the world..." class="w-full bg-transparent border border-gray-300 p-4 focus:border-gold outline-none transition resize-none font-medium" rows="3" required></textarea>
-                        </div>
-                        <div>
-                            <!-- Changed type="url" to type="text" so it won't crash if the link isn't perfectly formatted -->
-                            <input type="text" id="postImage" placeholder="Paste an image web link here (optional)" class="w-full bg-transparent border border-gray-300 p-4 focus:border-gold outline-none transition text-sm">
-                            <p class="text-[10px] text-gray-500 mt-1 uppercase tracking-widest">Example: https://website.com/my-picture.jpg</p>
-                        </div>
-                        <button type="submit" class="w-full bg-black text-white py-3 font-bold uppercase tracking-widest hover:bg-gold hover:text-black transition cursor-pointer">Post to Feed</button>
-                    </form>
-                </div>
-
-                <!-- Feed Posts Container (Where posts appear) -->
-                <div id="feedContainer" class="space-y-8">
-                    
-                    <!-- Example Permanent Post -->
-                    <div class="bg-white p-6 border-2 border-gray-200 shadow-lg">
-                        <div class="flex items-center space-x-4 mb-4">
-                            <img src="https://media-los4-1.cdn.whatsapp.net/v/t61.24694-24/609313783_905669001909076_1692419521789888718_n.jpg?ccb=11-4&oh=01_Q5Aa4AGlsLtgSFcwaZ6Zvkf487A0oqNdt5t8K7JwinBi9GH3bQ&oe=69D25675&_nc_sid=5e03e0&_nc_cat=106" class="w-12 h-12 rounded-full border-2 border-gold object-cover" alt="6TEEN">
-                            <div>
-                                <h4 class="font-bold text-black uppercase text-sm tracking-widest">6TEEN</h4>
-                                <p class="text-xs text-gray-500 font-medium">Just now</p>
+                    <!-- Art Piece 1 -->
+                    <div class="group relative bg-white border-[12px] border-black shadow-2xl p-6 block flex flex-col justify-between">
+                        <div class="aspect-square overflow-hidden flex items-center justify-center relative cursor-pointer" onclick="openLightbox('Neon Soul', 'Acrylic Paste on Cardboard', '2026', 'Link coming soon to view this artwork! We are currently cataloging the high-resolution files. Stay tuned for the official gallery release.', 'https://res.cloudinary.com/degsadldb/image/upload/v1779825723/ChatGPT_Image_May_22_2026_11_29_51_PM_ltswqj.png')">
+                            <img src="https://res.cloudinary.com/degsadldb/image/upload/v1779825723/ChatGPT_Image_May_22_2026_11_29_51_PM_ltswqj.png" alt="Neon Soul - Vibrant Abstract Painting by 6teen" class="w-full h-full object-cover group-hover:scale-110 transition duration-700">
+                            <div class="absolute inset-0 bg-gold bg-opacity-0 group-hover:bg-opacity-95 transition-all duration-300 flex items-center justify-center">
+                                <span class="text-black font-bold text-xl opacity-0 group-hover:opacity-100 uppercase tracking-[0.2em]">View Details</span>
                             </div>
                         </div>
-                        <p class="text-gray-800 mb-6 text-lg">Welcome to my live feed! Here I will be dropping my latest artworks, sudden thoughts, and explosive creative processes. Stay tuned and enjoy the ride. ✨</p>
-                        <!-- Post Image (if any) -->
-                        <div class="relative group">
-                            <img src="https://media-los4-1.cdn.whatsapp.net/v/t61.24694-24/609313783_905669001909076_1692419521789888718_n.jpg?ccb=11-4&oh=01_Q5Aa4AGlsLtgSFcwaZ6Zvkf487A0oqNdt5t8K7JwinBi9GH3bQ&oe=69D25675&_nc_sid=5e03e0&_nc_cat=106" class="w-full h-auto border border-gray-100" alt="Feed Post Image">
-                            <div class="absolute bottom-4 right-4 bg-black bg-opacity-70 text-white text-xs font-bold px-2 py-1 uppercase tracking-widest watermark-stamp">6TEEN</div>
-                        </div>
-                        <!-- Simple Like/Share buttons for style -->
-                        <div class="flex space-x-6 mt-6 pt-4 border-t border-gray-100 text-sm font-bold uppercase text-gray-400">
-                            <span class="hover:text-gold cursor-pointer transition">👍 Like</span>
-                            <span class="hover:text-gold cursor-pointer transition">💬 Comment</span>
-                            <span class="hover:text-gold cursor-pointer transition">↗ Share</span>
+                        <div class="mt-4 border-t border-gray-100 pt-4 text-left">
+                            <h3 class="font-bold text-lg text-black uppercase tracking-wide">Neon Soul</h3>
+                            <div class="text-sm text-gray-600 mt-2 space-y-1 font-light">
+                                <p><strong class="font-bold text-gold">Medium:</strong> Acrylic Paste on Cardboard</p>
+                                <p><strong class="font-bold text-gold">Year:</strong> 2026</p>
+                            </div>
+                            <span class="mt-4 inline-block text-xs font-bold uppercase tracking-widest text-gray-400 bg-gray-50 px-3 py-1 rounded border border-dashed border-gray-300 cursor-not-allowed">[ Link Coming Soon ]</span>
                         </div>
                     </div>
-
+                    <!-- Art Piece 2 -->
+                    <div class="group relative bg-white border-[12px] border-black shadow-2xl p-6 block flex flex-col justify-between">
+                        <div class="aspect-square overflow-hidden flex items-center justify-center relative cursor-pointer" onclick="openLightbox('The Noon Dream', 'Watercolors and Acrylic Paste', '2026', 'Link coming soon to view this artwork! This piece is currently being processed for digital display. Thank you for your patience.', 'https://res.cloudinary.com/degsadldb/image/upload/v1779825723/ChatGPT_Image_May_22_2026_11_29_51_PM_ltswqj.png')">
+                            <img src="https://res.cloudinary.com/degsadldb/image/upload/v1779825723/ChatGPT_Image_May_22_2026_11_29_51_PM_ltswqj.png" alt="The Noon Dream - Explosive Watercolor Painting by 6teen" class="w-full h-full object-cover group-hover:scale-110 transition duration-700">
+                            <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-95 transition-all duration-300 flex items-center justify-center">
+                                <span class="text-gold font-bold text-xl opacity-0 group-hover:opacity-100 uppercase tracking-[0.2em]">View Details</span>
+                            </div>
+                        </div>
+                        <div class="mt-4 border-t border-gray-100 pt-4 text-left">
+                            <h3 class="font-bold text-lg text-black uppercase tracking-wide">The Noon Dream</h3>
+                            <div class="text-sm text-gray-600 mt-2 space-y-1 font-light">
+                                <p><strong class="font-bold text-gold">Medium:</strong> Watercolors and Acrylic Paste</p>
+                                <p><strong class="font-bold text-gold">Year:</strong> 2026</p>
+                            </div>
+                            <span class="mt-4 inline-block text-xs font-bold uppercase tracking-widest text-gray-400 bg-gray-50 px-3 py-1 rounded border border-dashed border-gray-300 cursor-not-allowed">[ Link Coming Soon ]</span>
+                        </div>
+                    </div>
+                    <!-- Art Piece 3 -->
+                    <div class="group relative bg-white border-[12px] border-black shadow-2xl p-6 block flex flex-col justify-between">
+                        <div class="aspect-square overflow-hidden flex items-center justify-center relative cursor-pointer" onclick="openLightbox('Playfulness Entity', 'Mixed Experimental Mediums', '2026', 'Link coming soon to view this artwork! We are preparing high-contrast scans to showcase the unique textures of this piece online.', 'https://res.cloudinary.com/degsadldb/image/upload/v1779825723/ChatGPT_Image_May_22_2026_11_29_51_PM_ltswqj.png')">
+                            <img src="https://res.cloudinary.com/degsadldb/image/upload/v1779825723/ChatGPT_Image_May_22_2026_11_29_51_PM_ltswqj.png" alt="Playfulness Entity - Experimental Mixed Medium Artwork by 6teen" class="w-full h-full object-cover group-hover:scale-110 transition duration-700">
+                            <div class="absolute inset-0 bg-gold bg-opacity-0 group-hover:bg-opacity-95 transition-all duration-300 flex items-center justify-center">
+                                <span class="text-black font-bold text-xl opacity-0 group-hover:opacity-100 uppercase tracking-[0.2em]">View Details</span>
+                            </div>
+                        </div>
+                        <div class="mt-4 border-t border-gray-100 pt-4 text-left">
+                            <h3 class="font-bold text-lg text-black uppercase tracking-wide">Playfulness Entity</h3>
+                            <div class="text-sm text-gray-600 mt-2 space-y-1 font-light">
+                                <p><strong class="font-bold text-gold">Medium:</strong> Mixed Experimental Mediums</p>
+                                <p><strong class="font-bold text-gold">Year:</strong> 2026</p>
+                            </div>
+                            <span class="mt-4 inline-block text-xs font-bold uppercase tracking-widest text-gray-400 bg-gray-50 px-3 py-1 rounded border border-dashed border-gray-300 cursor-not-allowed">[ Link Coming Soon ]</span>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
@@ -418,7 +559,7 @@
                         </div>
                     </div>
                     <div class="bg-black p-8 md:p-12 text-white shadow-2xl">
-                        <form id="contactForm" onsubmit="handleContact(event)" class="space-y-6">
+                        <form id="contactForm" class="space-y-6">
                             <div>
                                 <label for="fname" class="block text-xs font-bold text-gray-500 uppercase tracking-widest mb-2">Full Name</label>
                                 <input type="text" id="fname" required class="w-full bg-transparent border-b border-gray-700 p-3 focus:border-gold outline-none transition">
@@ -438,7 +579,7 @@
         <footer class="bg-black text-center py-20 border-t-8 border-gold">
             <div class="max-w-4xl mx-auto px-4 flex flex-col items-center">
                 <div class="bg-white p-6 mb-12 shadow-[10px_10px_0px_#D4AF37]">
-                    <img src="https://media-los4-1.cdn.whatsapp.net/v/t61.24694-24/609313783_905669001909076_1692419521789888718_n.jpg?ccb=11-4&oh=01_Q5Aa4AGlsLtgSFcwaZ6Zvkf487A0oqNdt5t8K7JwinBi9GH3bQ&oe=69D25675&_nc_sid=5e03e0&_nc_cat=106" alt="6teen Logo" class="h-16 md:h-24 object-contain">
+                    <img src="https://res.cloudinary.com/degsadldb/image/upload/v1779825723/ChatGPT_Image_May_22_2026_11_29_51_PM_ltswqj.png" alt="6teen Brand Stamp Logo - Yellow and Purple Gradient Design" class="h-16 md:h-24 object-contain">
                 </div>
                 <p class="text-white text-xl font-bold tracking-widest mb-8 uppercase signature-motto md:text-2xl">
                     "6TEEN... Sixth Sense of Talented Entertainment Entity Noon"
@@ -447,6 +588,39 @@
                 <p class="text-gray-700 text-[10px] tracking-[0.5em] uppercase font-bold md:text-[0.65rem]">&copy; 2026 6TEEN. GLOBAL VISION. ALL RIGHTS RESERVED.</p>
             </div>
         </footer>
+    </div>
+
+    <!-- =======================================================
+         INTERACTIVE ART LIGHTBOX MODAL OVERLAY
+         ======================================================= -->
+    <div id="lightboxModal" class="fixed inset-0 z-[100] bg-black/95 hidden items-center justify-center p-4 backdrop-blur-sm transition-opacity duration-300 opacity-0" onclick="closeLightbox()">
+        <button onclick="closeLightbox()" class="absolute top-6 right-6 text-white text-4xl hover:text-gold transition focus:outline-none" aria-label="Close lightbox">&times;</button>
+        
+        <!-- Modal Card Wrapper -->
+        <div class="max-w-4xl w-full bg-white border-4 border-gold shadow-2xl overflow-hidden flex flex-col md:flex-row items-stretch" onclick="event.stopPropagation()">
+            <!-- Artwork display area -->
+            <div class="md:w-1/2 bg-black flex items-center justify-center p-6 relative">
+                <img id="lightboxImg" src="" alt="" class="max-h-[50vh] md:max-h-[70vh] object-contain">
+                <!-- Bottom-Right Branding Tag on Showcase -->
+                <div class="absolute bottom-4 right-4 bg-black/80 px-3 py-1.5 text-[10px] uppercase font-bold text-gold tracking-widest border border-gold/30">6TEEN ORIGINAL</div>
+            </div>
+            <!-- Artwork Metadata Context Area -->
+            <div class="md:w-1/2 p-8 flex flex-col justify-between bg-white text-black text-left">
+                <div>
+                    <h3 id="lightboxTitle" class="text-3xl font-bold mb-4 elegant-font text-black"></h3>
+                    <div class="space-y-3 text-sm text-gray-700 leading-relaxed font-light">
+                        <p><strong class="font-bold text-gold">Medium:</strong> <span id="lightboxMedium" class="text-black font-medium"></span></p>
+                        <p><strong class="font-bold text-gold">Year:</strong> <span id="lightboxYear" class="text-black font-medium"></span></p>
+                        <div class="h-px w-16 bg-gold my-4"></div>
+                        <p id="lightboxDesc" class="italic text-gray-600 text-base leading-relaxed"></p>
+                    </div>
+                </div>
+                <!-- Action Controls inside display overlay -->
+                <div class="mt-8 flex flex-col sm:flex-row gap-4">
+                    <button onclick="closeLightbox()" class="w-full bg-black text-white py-3 px-6 font-bold uppercase tracking-widest hover:bg-gold hover:text-black hover:border-gold transition text-xs border border-black cursor-pointer">Close View</button>
+                </div>
+            </div>
+        </div>
     </div>
 
     <!-- Toast Element -->
@@ -459,70 +633,38 @@
         btn.onclick = () => menu.classList.toggle('hidden');
         document.querySelectorAll('.mobile-link').forEach(l => l.onclick = () => menu.classList.add('hidden'));
 
-        // Contact Form Logic (Fixed to use Event Listener for better live preview support)
+        // Contact Form Logic
         document.getElementById('contactForm').addEventListener('submit', function(e) {
-            e.preventDefault();
+            e.preventDefault(); 
+            
             const name = document.getElementById('fname').value;
             const message = document.getElementById('fmsg').value;
-            const subject = encodeURIComponent(`6TEEN Official Inquiry from ${name}`);
-            const body = encodeURIComponent(`${message}\n\nSent by: ${name}`);
+            const submitBtn = e.target.querySelector('button[type="submit"]');
             
-            showToast("Opening transmission gateway...");
+            submitBtn.innerText = "SENDING TRANSMISSION...";
             
-            setTimeout(() => {
-                window.location.href = `mailto:6teen.official.00@gmail.com?subject=${subject}&body=${body}`;
-            }, 1000);
-        });
-
-        // --- NEW: Live Feed Logic (Fixed to use Event Listener) ---
-        document.getElementById('postForm').addEventListener('submit', function(e) {
-            e.preventDefault(); // Stop the page from refreshing
-            
-            // 1. Get the text and image link from the typing boxes
-            const postText = document.getElementById('postText').value;
-            const postImageLink = document.getElementById('postImage').value;
-            const feedContainer = document.getElementById('feedContainer');
-
-            // 2. Prepare the Image HTML (only if a link was pasted!)
-            let imageHTML = '';
-            if (postImageLink.trim() !== '') {
-                // I've added a neat 6TEEN watermark to the images just like you wanted!
-                imageHTML = `
-                <div class="relative group mt-6">
-                    <img src="${postImageLink}" class="w-full h-auto border border-gray-100" alt="Feed Post Image" onerror="this.style.display='none'">
-                    <div class="absolute bottom-4 right-4 bg-black bg-opacity-70 text-white text-xs font-bold px-2 py-1 uppercase tracking-widest">6TEEN</div>
-                </div>`;
-            }
-
-            // 3. Build the new Facebook-style post 
-            const newPostHTML = `
-                <div class="bg-white p-6 border-2 border-gold shadow-[5px_5px_0_#000] animate-fade-in">
-                    <div class="flex items-center space-x-4 mb-4">
-                        <img src="https://media-los4-1.cdn.whatsapp.net/v/t61.24694-24/609313783_905669001909076_1692419521789888718_n.jpg?ccb=11-4&oh=01_Q5Aa4AGlsLtgSFcwaZ6Zvkf487A0oqNdt5t8K7JwinBi9GH3bQ&oe=69D25675&_nc_sid=5e03e0&_nc_cat=106" class="w-12 h-12 rounded-full border-2 border-gold object-cover" alt="6TEEN">
-                        <div>
-                            <h4 class="font-bold text-black uppercase text-sm tracking-widest">6TEEN</h4>
-                            <p class="text-xs text-gray-500 font-medium">Just now</p>
-                        </div>
-                    </div>
-                    <p class="text-gray-800 text-lg">${postText}</p>
-                    ${imageHTML}
-                    
-                    <div class="flex space-x-6 mt-6 pt-4 border-t border-gray-100 text-sm font-bold uppercase text-gray-400">
-                        <span class="hover:text-gold cursor-pointer transition">👍 Like</span>
-                        <span class="hover:text-gold cursor-pointer transition">💬 Comment</span>
-                        <span class="hover:text-gold cursor-pointer transition">↗ Share</span>
-                    </div>
-                </div>
-            `;
-
-            // 4. Place the new post at the very top of the feed container
-            feedContainer.insertAdjacentHTML('afterbegin', newPostHTML);
-
-            // 5. Empty out the typing boxes so they are fresh for the next post
-            document.getElementById('postForm').reset();
-            
-            // 6. Tell the user it worked!
-            showToast("Transmission posted successfully!");
+            fetch("https://formsubmit.co/ajax/6teen.official.00@gmail.com", {
+                method: "POST",
+                headers: { 
+                    'Content-Type': 'application/json',
+                    'Accept': 'application/json'
+                },
+                body: JSON.stringify({
+                    name: name,
+                    message: message,
+                    _subject: "New Transmission from 6TEEN Website!"
+                })
+            })
+            .then(response => response.json())
+            .then(data => {
+                showToast("Transmission sent successfully to 6TEEN!");
+                e.target.reset(); 
+                submitBtn.innerText = "SEND TRANSMISSION"; 
+            })
+            .catch(error => {
+                showToast("Oops! Something went wrong. Try again.");
+                submitBtn.innerText = "SEND TRANSMISSION";
+            });
         });
 
         // Notification pop-up logic
@@ -532,6 +674,265 @@
             t.classList.add("show");
             setTimeout(() => t.classList.remove("show"), 3000);
         }
+
+        // =======================================================
+        // INTERACTIVE LIGHTBOX SYSTEM LOGIC
+        // =======================================================
+        function openLightbox(title, medium, year, desc, imgUrl) {
+            const modal = document.getElementById('lightboxModal');
+            document.getElementById('lightboxImg').src = imgUrl;
+            document.getElementById('lightboxImg').alt = title;
+            document.getElementById('lightboxTitle').innerText = title;
+            document.getElementById('lightboxMedium').innerText = medium;
+            document.getElementById('lightboxYear').innerText = year;
+            document.getElementById('lightboxDesc').innerText = desc;
+            
+            modal.classList.remove('hidden');
+            modal.classList.add('flex');
+            
+            // Allow state rendering before applying smooth opacity transition
+            setTimeout(() => {
+                modal.classList.add('opacity-100');
+            }, 10);
+        }
+        window.openLightbox = openLightbox;
+
+        function closeLightbox() {
+            const modal = document.getElementById('lightboxModal');
+            modal.classList.remove('opacity-100');
+            
+            // Allow fade transition to complete before setting display back to hidden
+            setTimeout(() => {
+                modal.classList.remove('flex');
+                modal.classList.add('hidden');
+            }, 300);
+        }
+        window.closeLightbox = closeLightbox;
+
+        // --- Interactive Paint Canvas Logic ---
+        const canvas = document.getElementById('drawingCanvas');
+        const ctx = canvas.getContext('2d');
+        let painting = false;
+        let brushColor = '#D4AF37';
+        let brushSize = 8;
+        let lastWidth = 0;
+
+        // Undo & Redo History System Stacks
+        let undoStack = [];
+        let redoStack = [];
+        const maxHistory = 25; 
+
+        // Preload transparent branding logo for real canvas watermarking
+        const watermarkLogo = new Image();
+        watermarkLogo.crossOrigin = "anonymous";
+        watermarkLogo.src = "https://res.cloudinary.com/degsadldb/image/upload/v1779825723/ChatGPT_Image_May_22_2026_11_29_51_PM_ltswqj.png";
+        watermarkLogo.onload = function() {
+            drawWatermarkOnCanvas();
+            // Capture baseline state once the logo is initially painted
+            saveState();
+        };
+
+        // Adapt canvas to display space - optimized with width checking to prevent erasing on mobile page scrolling
+        function resizeCanvas() {
+            const currentWidth = canvas.parentElement.clientWidth;
+            if (currentWidth === lastWidth) return; 
+            
+            lastWidth = currentWidth;
+            canvas.width = currentWidth;
+            canvas.height = canvas.parentElement.clientHeight || 400;
+            clearCanvas();
+        }
+
+        window.addEventListener('resize', resizeCanvas);
+        window.addEventListener('load', resizeCanvas);
+
+        function startPosition(e) {
+            painting = true;
+            draw(e);
+        }
+
+        function finishedPosition() {
+            if (!painting) return;
+            painting = false;
+            ctx.beginPath();
+            
+            // Re-apply the watermark branding logo over drawings so it always stays on top cleanly!
+            drawWatermarkOnCanvas();
+            
+            // Capture and save current state into history on finish
+            saveState();
+        }
+
+        // History Snapshot Saver
+        function saveState() {
+            undoStack.push(ctx.getImageData(0, 0, canvas.width, canvas.height));
+            if (undoStack.length > maxHistory) {
+                undoStack.shift();
+            }
+            // Wipe out redo actions when a new stroke is completed
+            redoStack = [];
+        }
+
+        // Undo last stroke action
+        function undo() {
+            if (undoStack.length > 1) {
+                // Pop current frame and store in redo pool
+                const currentState = undoStack.pop();
+                redoStack.push(currentState);
+                
+                // Get the frame prior and draw
+                const previousState = undoStack[undoStack.length - 1];
+                ctx.putImageData(previousState, 0, 0);
+                showToast("Undone last stroke!");
+            } else {
+                showToast("Nothing to undo.");
+            }
+        }
+        window.undo = undo;
+
+        // Redo last stroke action
+        function redo() {
+            if (redoStack.length > 0) {
+                const nextState = redoStack.pop();
+                undoStack.push(nextState);
+                ctx.putImageData(nextState, 0, 0);
+                showToast("Redone!");
+            } else {
+                showToast("Nothing to redo.");
+            }
+        }
+        window.redo = redo;
+
+        // Mouse & Touch position tracking helper
+        function getMousePos(canvasDom, event) {
+            const rect = canvasDom.getBoundingClientRect();
+            let clientX = event.clientX;
+            let clientY = event.clientY;
+
+            // Manage touch coordinates for mobile screens safely
+            if (event.touches && event.touches.length > 0) {
+                clientX = event.touches[0].clientX;
+                clientY = event.touches[0].clientY;
+            }
+
+            return {
+                x: clientX - rect.left,
+                y: clientY - rect.top
+            };
+        }
+
+        function draw(e) {
+            if (!painting) return;
+            e.preventDefault();
+
+            const pos = getMousePos(canvas, e);
+
+            ctx.lineWidth = brushSize;
+            ctx.lineCap = 'round';
+            ctx.strokeStyle = brushColor;
+
+            // Smooth glowing neon trace filter
+            ctx.shadowBlur = brushSize * 1.5;
+            ctx.shadowColor = brushColor;
+
+            ctx.lineTo(pos.x, pos.y);
+            ctx.stroke();
+            ctx.beginPath();
+            ctx.moveTo(pos.x, pos.y);
+        }
+
+        canvas.addEventListener('mousedown', startPosition);
+        canvas.addEventListener('mouseup', finishedPosition);
+        canvas.addEventListener('mousemove', draw);
+
+        canvas.addEventListener('touchstart', startPosition);
+        canvas.addEventListener('touchend', finishedPosition);
+        canvas.addEventListener('touchmove', draw);
+
+        function setBrushColor(color) {
+            brushColor = color;
+            showToast("Color updated! Unleash your imagination.");
+        }
+
+        window.setBrushColor = setBrushColor;
+
+        // Custom function to set brush size dynamically
+        function setBrushSize(size) {
+            brushSize = parseInt(size);
+            document.getElementById('brushSizeVal').innerText = size + "px";
+        }
+
+        window.setBrushSize = setBrushSize;
+
+        function clearCanvas() {
+            ctx.fillStyle = '#0d0d0d';
+            ctx.fillRect(0, 0, canvas.width, canvas.height);
+            
+            // Re-draw background grid watermark for premium aesthetic
+            ctx.shadowBlur = 0; 
+            ctx.fillStyle = 'rgba(212, 175, 55, 0.2)';
+            ctx.font = 'bold 16px "Playfair Display", serif';
+            ctx.fillText('6TEEN PLAYGROUND', 24, 40);
+
+            ctx.fillStyle = 'rgba(212, 175, 55, 0.08)';
+            ctx.font = 'italic 12px "Poppins", sans-serif';
+            ctx.fillText('Draw your neon art...', 24, 60);
+
+            // Add the transparent logo watermark live on screen
+            drawWatermarkOnCanvas();
+
+            // Clear active history stack and start fresh
+            undoStack = [ctx.getImageData(0, 0, canvas.width, canvas.height)];
+            redoStack = [];
+        }
+
+        window.clearCanvas = clearCanvas;
+
+        // Draw the transparent logo in the bottom-right corner
+        function drawWatermarkOnCanvas() {
+            if (watermarkLogo.complete && watermarkLogo.naturalWidth > 0) {
+                ctx.shadowBlur = 0; // Turn off glow effect for logo render
+                const targetWidth = 100;
+                const targetHeight = targetWidth * (watermarkLogo.naturalHeight / watermarkLogo.naturalWidth);
+                ctx.globalAlpha = 0.5; // Smooth transparent signature feel
+                ctx.drawImage(
+                    watermarkLogo, 
+                    canvas.width - targetWidth - 24, 
+                    canvas.height - targetHeight - 24, 
+                    targetWidth, 
+                    targetHeight
+                );
+                ctx.globalAlpha = 1.0; // Reset opacity
+            }
+        }
+
+        // Trigger safe device storage download as PNG
+        function downloadArt() {
+            // Apply logo in high visibility right before saving to make sure watermark is premium & sharp
+            if (watermarkLogo.complete && watermarkLogo.naturalWidth > 0) {
+                ctx.shadowBlur = 0;
+                const targetWidth = 120;
+                const targetHeight = targetWidth * (watermarkLogo.naturalHeight / watermarkLogo.naturalWidth);
+                ctx.globalAlpha = 0.95;
+                ctx.drawImage(
+                    watermarkLogo, 
+                    canvas.width - targetWidth - 24, 
+                    canvas.height - targetHeight - 24, 
+                    targetWidth, 
+                    targetHeight
+                );
+                ctx.globalAlpha = 1.0;
+            }
+
+            const dataURL = canvas.toDataURL('image/png');
+            const downloadLink = document.createElement('a');
+            downloadLink.download = '6teen-creative-art.png';
+            downloadLink.href = dataURL;
+            downloadLink.click();
+            showToast("Masterpiece saved with 6teen branding!");
+        }
+
+        window.downloadArt = downloadArt;
     </script>
 </body>
 </html>
